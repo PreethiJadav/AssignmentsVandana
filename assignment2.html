@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Word </title>
+	<style>
+		body
+		{
+			text-align: center;
+			align-items: center;
+			
+			background-color: aliceblue;
+		}
+		.container
+		{
+			padding: 10px 10px;
+			border-width: 20px;
+			border: 10px;
+
+		}
+
+	</style>
+
+	
+</head>
+<body>
+	<div class="container">
+
+<h1><i>Input string </i></h1>
+	<h2>Enter a line</h2>
+	<br>
+	<input type="text" id="line"  style="color: Blue;padding: 10px 15px;background-color: whilte;" required/>
+	<h2>Enter a word</h2>
+	<br>
+	<input type="text" style="color: Blue;padding: 10px 15px;background-color: whilte;" id="wrd" required/>
+	<br></br>
+
+<p>Click the below button to extract.(Please note case sensitive it is)</p>
+<input type="button" style="color: White;padding: 20px 30px;background-color: Green;"value="Extract" onclick="Function()" />
+<h1><p id="myId"></p></h1>
+
+<script>
+    function Function() {
+        var A = document.getElementById('line').value;
+        var B = document.getElementById('wrd').value;
+       var i = A.indexOf(B);
+        var r = A.substring(i+1);
+
+document.getElementById("myId").innerHTML =r;
+
+      
+        }
+</script>
+</div>
+</body>
+</html>
